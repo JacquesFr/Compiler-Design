@@ -68,11 +68,11 @@ DIGIT    [0-9]
 
 [0-9|_][a-zA-Z0-9|_]*[a-zA-Z0-9|_] {printf("Error at line %d, column %d: Identifier \"%s\" must begin with a letter\n", currLine, currPos, yytext); currPos += yyleng; exit(0);}
 
-[a-zA-Z][a-zA-Z0-9|_]*[_] {printf("Error at line %d, column %d: Identifier \"%s\" cannot end with an underscore\n" currLine, currPos, yytext); currPos += yyleng; exit(0);}
+[a-zA-Z][a-zA-Z0-9|_]*[_] {printf("Error at line %d, column %d: Identifier \"%s\" cannot end with an underscore\n", currLine, currPos, yytext); currPos += yyleng; exit(0);}
 
 [a-zA-Z][a-zA-Z0-9|_]*[a-zA-Z0-9] {printf("IDENT %s\n", yytext); currPos +=yyleng;}
 
-[a-zA-Z][a-zA-Z0-9] {printf("IDENT %s\n", yytext); currPos +=yyleng;}
+[a-zA-Z][a-zA-Z0-9]* {printf("IDENT %s\n", yytext); currPos += yyleng;}
 
 [ ]            {currPos += yyleng;}
 
