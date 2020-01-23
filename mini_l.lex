@@ -2,6 +2,7 @@
 
 %{   
    int currLine = 1, currPos = 1;
+ 
 %}
 
 DIGIT    [0-9]
@@ -17,27 +18,27 @@ DIGIT    [0-9]
 "return"       {printf("RETURN\n"); currPos += yyleng;}
 
 "function"     {printf("FUNCTION\n"); currPos += yyleng;}
-"beginparams"  {printf("BEGIN_PARAMS"); currPos+= yyleng;}
-"endparams"    {printf("END_PARAMS"); currPos += yyleng;}
-"beginlocals"  {printf("BEGIN_LOCALS"); currPos += yyleng;}
-"endlocals"    {printf("END_LOCALS"); currPos += yyleng;}
-"beginbody"    {printf("BEGIN_BODY"); currPos += yyleng;}
-"endbody"      {printf("END_BODY"); currPos += yyleng;}
-"integer"      {printf("INTEGER"); currPos += yyleng;}
-"array"        {printf("ARRAY"); currPos += yyleng;}
-"of"           {printf("OF"); currPos += yyleng;}
-"if"           {printf("IF"); currPos += yyleng;}
-"then"         {printf("THEN"); currPos += yyleng;}
-"endif"        {printf("ENDIF"); currPos += yyleng;}
-"else"         {printf("ELSE"); currPos += yyleng;}
-"while"        {printf("WHILE"); currPos += yyleng;}
-"do"           {printf("DO"); currPos += yyleng;}
-"for"          {printf("FOR"); currPos += yyleng;}
-"beginloop"    {printf("BEGINLOOP"); currPos += yyleng;}
-"endloop"      {printf("ENDLOOP"); currPos += yyleng;}
-"continue"     {printf("CONTINUE"); currPos += yyleng;}
-"read"         {printf("READ"); currPos += yyleng;}
-"write"        {printf("WRITE"); currPos += yyleng;}
+"beginparams"  {printf("BEGIN_PARAMS\n"); currPos+= yyleng;}
+"endparams"    {printf("END_PARAMS\n"); currPos += yyleng;}
+"beginlocals"  {printf("BEGIN_LOCALS\n"); currPos += yyleng;}
+"endlocals"    {printf("END_LOCALS\n"); currPos += yyleng;}
+"beginbody"    {printf("BEGIN_BODY\n"); currPos += yyleng;}
+"endbody"      {printf("END_BODY\n"); currPos += yyleng;}
+"integer"      {printf("INTEGER\n"); currPos += yyleng;}
+"array"        {printf("ARRAY\n"); currPos += yyleng;}
+"of"           {printf("OF\n"); currPos += yyleng;}
+"if"           {printf("IF\n"); currPos += yyleng;}
+"then"         {printf("THEN\n"); currPos += yyleng;}
+"endif"        {printf("ENDIF\n"); currPos += yyleng;}
+"else"         {printf("ELSE\n"); currPos += yyleng;}
+"while"        {printf("WHILE\n"); currPos += yyleng;}
+"do"           {printf("DO\n"); currPos += yyleng;}
+"for"          {printf("FOR\n"); currPos += yyleng;}
+"beginloop"    {printf("BEGINLOOP\n"); currPos += yyleng;}
+"endloop"      {printf("ENDLOOP\n"); currPos += yyleng;}
+"continue"     {printf("CONTINUE\n"); currPos += yyleng;}
+"read"         {printf("READ\n"); currPos += yyleng;}
+"write"        {printf("WRITE\n"); currPos += yyleng;}
 
 "-"            {printf("SUB\n"); currPos += yyleng;}
 "+"            {printf("ADD\n"); currPos += yyleng;}
